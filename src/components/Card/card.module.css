@@ -1,0 +1,180 @@
+
+
+.card{
+    margin-top: 10vh;
+    width: 60vw;
+    height: 80vh;
+    margin-top: 100px;
+    margin-left: 250px;
+
+    box-shadow: rgba(0, 0, 0, 0.05) 
+    0px 6px 24px 0px, 
+    rgba(0, 0, 0, 0.08) 0px 5px 5px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+    overflow: hidden;
+}
+
+.left{
+    width: 40%;
+    height: 100%;
+    padding-top: 30px;
+    font-family: sans-serif;
+    background-color: #2874f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.top{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 10px;
+}
+.bottom{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading , .desc{
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+.desc{
+    font-size: 15px;
+    color: rgb(219, 219, 219);
+    letter-spacing: 1px;
+}
+
+.logo_img{
+    width: 70%;
+    height: 100%;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+
+
+.right{
+    width: 60%;
+    height: 100%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+}
+
+.para {
+    margin-top: 10px;
+    width: 80%;
+    height: 30%;
+    font-size: small;
+    font-family: sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.Login_btn {
+    width: 80%;
+    height: 15%;
+    background-color: rgb(251, 100, 27);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 2px;
+    font-weight: bolder;
+    font-size: large;
+    cursor: pointer;
+    
+}
+.Login_btn:hover {
+    background-color: rgb(255, 128, 0);
+}
+.SignUp_btn {
+    width: 80%;
+    height: 15%;
+    background-color: rgb(251, 100, 27);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 2px;
+    font-weight: bolder;
+    font-size: large;
+    cursor: pointer;
+}
+.SignUp_btn:hover {
+    background-color: rgb(255, 128, 0);
+
+}
+
+.Input_Field {
+    width: 80%;
+    height: 10%;
+
+}
+.Input_Field:focus {
+    color: #2874f0;
+}
+.forgot {
+    color: rgb(0, 55, 218);
+    padding-left: 2cm;
+}
+ a {
+    color: rgb(0, 55, 218);
+ }
+ .Field {
+    width: 80%;
+    height: 25%;
+    padding-left: 0px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+ }
+
+ input[type='checkbox'] {
+    cursor: pointer;
+ }
+
+ .SignUp_Field {
+    width: 100%;
+    height: 50%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+ }
+ .close_btn {
+    width: 5%;
+    height: 5%;
+    padding-left: 90%;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+ }
+ button {
+    cursor: pointer;
+ }
