@@ -24,16 +24,16 @@ function App() {
   
   return (
     <div className="App">
-        {/* <NavBar loginHandler={loginHandler}/>
+        <NavBar loginHandler={loginHandler}/>
         {
           login ? <Card /> : null 
         }
         <LoginPage electronicMessage={electronicMessage}/>
         {
           electronicMsg ? <ItemsPage /> : null
-        } */}
+        }
         
-        <SignUp />
+        {/* <SignUp /> */}
 
     </div>
   );
