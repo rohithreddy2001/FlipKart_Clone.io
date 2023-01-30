@@ -118,7 +118,7 @@
     border: none;
     border-radius: 2px;
     font-weight: bolder;
-    font-size: large;
+    font-size: 25px;
     cursor: pointer;
 }
 .SignUp_btn:hover {

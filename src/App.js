@@ -3,16 +3,22 @@ import React, { useState } from 'react';
 import NavBar from './Pages/LoginPage/NavBar';
 import Card from './components/Card/Card';
 import LoginPage from './Pages/LoginPage/LoginPage';
-import ItemsPage from './Pages/LoginPage/itemsPage/ItemsPage';
+import GadgetsPage from './Pages/LoginPage/itemsPage/GadgetsPage';
 import SignUp from './components/Card/SignUp';
+import HomeItemCard from './Pages/LoginPage/HomeItemCard';
 
 
 function App() {
   const [login,setLogin] = useState(false)
+  const [signUp,setSignUp] = useState(false)
 
   const loginHandler = () => {
     setLogin(!login)
     console.log(!login)
+  }
+
+  const signUpHandler = () => {
+    setSignUp(!signUp)
   }
 
   const [electronicMsg,setelectronicMsg] = useState(false)
@@ -26,15 +32,19 @@ function App() {
     <div className="App">
         <NavBar loginHandler={loginHandler}/>
         {
-          login ? <Card /> : null 
+          login ? <Card signUpHandler={signUpHandler} /> : null 
         }
-        <LoginPage electronicMessage={electronicMessage}/>
+         <LoginPage electronicMessage={electronicMessage}/>
         {
-          electronicMsg ? <ItemsPage /> : null
+          electronicMsg ? <GadgetsPage /> : null
         }
         
-        {/* <SignUp /> */}
-
+        {
+          signUp && <SignUp />
+        }
+        {/* <GadgetsPage /> */}
+        {/* <HomeItemCard /> */}
+        
     </div>
   );
 }

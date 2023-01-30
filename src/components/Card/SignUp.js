@@ -29,7 +29,7 @@ function SignUp() {
                 <input className={classes.Input_Field} type='email' placeholder='Enter Your Email' required></input> <br />
                 <input className={classes.Input_Field} type='password' placeholder='Create Password' required></input> <br />
                 <input className={classes.Input_Field} type='password' placeholder='Confirm Password' required></input> <br />
-                <button className={classes.SignUp_btn} type='submit'>SignUp</button> <br />
+                <button className={classes.SignUp_btn} type='submit'>Sign Up</button> <br />
             </div>
 
       </div>

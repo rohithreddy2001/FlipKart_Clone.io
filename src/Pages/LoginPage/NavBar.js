@@ -16,7 +16,7 @@ function NavBar({loginHandler}) {
              <button type='button' className={styles.login_button} onClick={loginHandler} >Login</button>
              <h3 className={styles.seller_btn}>Become a Seller</h3>
              <h3 className={styles.more_btn}>More</h3>
-             <h3 className={styles.cart_btn}>Cart</h3>
+             <h3 className={styles.Cart_btn}>Cart</h3>
             </div>
   )
 }

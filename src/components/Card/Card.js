@@ -4,8 +4,8 @@ import classes from './card.module.css'
 import logo from './logo.png'
 import SignUp from './SignUp'
 import App from '../../App'
- 
-function Card () {
+
+function Card ({signUpHandler}) {
     const [name,setName] = useState("")
     const [pass,setPass] = useState("")
     const [close,setClose] = useState(false)
@@ -52,7 +52,7 @@ function Card () {
                 <p className={classes.para}>* By continuing, you agree to Flipkart's Terms of Use and Privacy Policy.</p>
                 <button className={classes.Login_btn} type='submit' onClick={buttonHandler}>Login</button> <br />
                 <div className={classes.SignUp_Field}>
-                    <a href='#' onClick={() => setSignUp(!signUp)} >New to Flipkart? Create an account</a>
+                    <a href='#' onClick={signUpHandler} >New to Flipkart? Create an account</a>
                 </div>
             </div>
         </div>
