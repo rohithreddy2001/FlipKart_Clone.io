@@ -6,44 +6,50 @@ import LoginPage from './Pages/LoginPage/LoginPage';
 import GadgetsPage from './Pages/LoginPage/itemsPage/GadgetsPage';
 import SignUp from './components/Card/SignUp';
 import HomeItemCard from './Pages/LoginPage/HomeItemCard';
+import CartList from './Pages/LoginPage/cartList/CartList';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import ToysPage from './Pages/LoginPage/itemsPage/ToysPage';
 
 
 function App() {
-  const [login,setLogin] = useState(false)
-  const [signUp,setSignUp] = useState(false)
+  // const [login,setLogin] = useState(false)
+  // const [signUp,setSignUp] = useState(false)
+  // const [cart,setCart] = useState(false)
 
-  const loginHandler = () => {
-    setLogin(!login)
-    console.log(!login)
-  }
+  // const loginHandler = () => {
+  //   setLogin(!login)
+  //   console.log(!login)
+  // }
 
-  const signUpHandler = () => {
-    setSignUp(!signUp)
-  }
+  // const signUpHandler = () => {
+  //   setSignUp(!signUp)
+  // }
 
-  const [electronicMsg,setelectronicMsg] = useState(false)
+  // const cartHandler = () => {
+  //   setCart(!cart)
+  //   console.log(!cart)
+  // }
 
-  const electronicMessage = () => {
-    setelectronicMsg(!electronicMsg)
-  }
+  // const [electronicMsg,setelectronicMsg] = useState(false)
+
+  // const electronicMessage = () => {
+  //   setelectronicMsg(!electronicMsg)
+  // }
 
   
   return (
     <div className="App">
-        <NavBar loginHandler={loginHandler}/>
-        {
-          login ? <Card signUpHandler={signUpHandler} /> : null 
-        }
-         <LoginPage electronicMessage={electronicMessage}/>
-        {
-          electronicMsg ? <GadgetsPage /> : null
-        }
-        
-        {
-          signUp && <SignUp />
-        }
-        {/* <GadgetsPage /> */}
-        {/* <HomeItemCard /> */}
+        <BrowserRouter>
+          <NavBar />
+            <Routes>
+              <Route path='/' element={<LoginPage />}/>
+              <Route path='/gadgetsPage' element={<GadgetsPage />} />
+              <Route path='/signInPage' element={<Card />} />
+              <Route path='/signUpPage' element={<SignUp />} />
+              <Route path='/cartPage' element={<CartList />} />
+              <Route path='/toysPage' element={<ToysPage />}/>
+            </Routes>
+        </BrowserRouter>
         
     </div>
   );

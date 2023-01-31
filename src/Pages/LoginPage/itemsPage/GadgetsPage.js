@@ -10,6 +10,12 @@ import realme_img from './realme.png'
 import oneplus_img from './oneplus.png'
 import iqoo_img from './iqoo.png'
 import google_img from './google.png'
+import dell_img from './dell.png'
+import hp_img from './hp.png'
+import lenovo_img from './lenovo.png'
+
+
+
 function GadgetsPage() {
 
   const data = [
@@ -76,7 +82,29 @@ function GadgetsPage() {
       Price: "29,999",
       Rating: "⭐⭐⭐⭐⭐ 4,500+ ratings",
       img:iqoo_img
-    }
+    },
+    {
+      Id: 10,
+      Brand: 'Dell Inspiron 15',
+      Price: "79,999",
+      Rating: "⭐⭐⭐⭐⭐ 13,500+ ratings",
+      img:dell_img
+    },
+    {
+      Id: 11,
+      Brand: 'Hp Pavilion 14',
+      Price: "89,999",
+      Rating: "⭐⭐⭐⭐⭐ 11,500+ ratings",
+      img:hp_img
+    },
+    {
+      Id: 12,
+      Brand: 'Lenovo Idea Pad Slim 5',
+      Price: "59,999",
+      Rating: "⭐⭐⭐⭐⭐ 8,500+ ratings",
+      img:lenovo_img
+    },
+
 ]
 
 

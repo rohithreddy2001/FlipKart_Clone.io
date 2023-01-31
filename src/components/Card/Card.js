@@ -4,12 +4,18 @@ import classes from './card.module.css'
 import logo from './logo.png'
 import SignUp from './SignUp'
 import App from '../../App'
+import { useNavigate } from 'react-router-dom'
 
-function Card ({signUpHandler}) {
+function Card () {
     const [name,setName] = useState("")
     const [pass,setPass] = useState("")
     const [close,setClose] = useState(false)
-    const [signUp,setSignUp] = useState(false)
+    
+    let navigate = useNavigate()
+    const signUpHandler =() => {
+        navigate('/signUpPage')
+    }
+
     function inputHandler(event) {
         setName(event.target.value)
         event.preventDefault()
@@ -52,7 +58,7 @@ function Card ({signUpHandler}) {
                 <p className={classes.para}>* By continuing, you agree to Flipkart's Terms of Use and Privacy Policy.</p>
                 <button className={classes.Login_btn} type='submit' onClick={buttonHandler}>Login</button> <br />
                 <div className={classes.SignUp_Field}>
-                    <a href='#' onClick={signUpHandler} >New to Flipkart? Create an account</a>
+                    <a href='' onClick={signUpHandler} >New to Flipkart? Create an account</a>
                 </div>
             </div>
         </div>

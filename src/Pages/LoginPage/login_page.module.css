@@ -19,12 +19,12 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: rgb(236, 240, 203);
+    background-color: rgb(255, 248, 183);
     
 }
 .Bottom {
     margin-top: 5px;
-    background-color: rgb(236, 240, 203);
+    background-color: rgb(255, 248, 183);
 }
 
 .Top_Left {
@@ -65,9 +65,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(236, 240, 203);
+    background-color: rgb(255, 255, 255);
     gap: 10px;
     flex-wrap: wrap;
+}
+
+.Bottom_Right {
+    width: 80vw;
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    gap: 10px;
+    flex-wrap: wrap;      
 }
 
 .left_div {
@@ -115,11 +126,33 @@
     cursor: pointer;
     
 }
-.search {
-    width: 30%;
-    height: 60%;
-    margin-top: 12px;
+.search_ctn {
+    
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    
 }
+.search {
+    width: 25vw;
+    height: 55%;
+    border: 1px solid black;
+}
+
+.search_icon {
+    position: absolute;
+    margin-left: 22vw;
+    width: 25px;
+    height: 4vh;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 .login_button {
     width: 8%;
     height: 55%;
@@ -153,7 +186,7 @@ i {
 } */
 
 .item_card {
-    height: 40vh;
+    height: 42vh;
     width: 25vw;
     /* font-size: 20px;
     font-weight: bolder; */
@@ -162,9 +195,9 @@ i {
 }
 
 .card_top {
-    padding-top: 5px;
+    
     width: 25vw;
-    height: 15vh;
+    height: 17vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,6 +272,8 @@ i {
 }
 
 .item_img {
-    height: 14vh;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: 17vh;
     
 }

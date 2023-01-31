@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
 }
-.ItemsPage {
+.ItemsPage,.toy_page {
     margin-top: 10vh;
     padding-top: 10px;
     width: 100vw;
@@ -31,9 +31,9 @@
 }
 
 .item_top {
-    padding-top: 5px;
+    
     width: 30vw;
-    height: 20vh;
+    height: 22vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +45,7 @@
 .item_bottom {
     padding-top: 10px;
     width: 30vw;
-    height: 30vh;
+    height: 28vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -110,6 +110,8 @@
 }
 
 .item_img {
-    height: 18vh;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: 22vh;
     
 }

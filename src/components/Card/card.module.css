@@ -14,7 +14,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* position: absolute; */
+    position: absolute;
     overflow: hidden;
 }
 
@@ -112,7 +112,7 @@
 }
 .SignUp_btn {
     width: 80%;
-    height: 15%;
+    height: 10%;
     background-color: rgb(251, 100, 27);
     color: rgb(255, 255, 255);
     border: none;
