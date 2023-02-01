@@ -1,17 +1,17 @@
-import React from 'react'
+import React,{useState} from 'react'
 import classes from './card.module.css'
 import logo from './logo.png'
 
 
-function SignUp() {
+function SignUp({close,closeHandler}) {
+    
   return (
-    <div className={classes.card} >
-      {/* style={close ? {display:"none"} : {display:'flex'}} */}
+    <div className={classes.card} style={close ? {display:"none"} : {display:'flex'}}>
             <div className={classes.left}>
                 <div className={classes.top}>
-                    <h2 className={classes.heading}>SIGN UP</h2>
+                    <h2 className={classes.heading}>Looks like you're new here!</h2>
                     <p className={classes.desc}>
-                        Get access to your Orders, Wishlist and Recommendations
+                        Sign up to get started
                     </p>
                 </div>
                 <div className={classes.bottom}>
@@ -19,11 +19,11 @@ function SignUp() {
                 </div>
             </div>
             <div className={classes.right}>
-                {/* <div className={classes.close_btn}>
+                <div className={classes.close_btn}>
 
-                    <button onClick={(e) => setClose(true)}>❌</button>
+                    <button onClick={closeHandler}>❌</button>
                     
-                </div> */}
+                </div>
                 <input className={classes.Input_Field} type='text' placeholder='Enter Your First Name' required></input> <br />
                 <input className={classes.Input_Field} type='text' placeholder='Enter Your Last Name' required></input> <br />
                 <input className={classes.Input_Field} type='email' placeholder='Enter Your Email' required></input> <br />

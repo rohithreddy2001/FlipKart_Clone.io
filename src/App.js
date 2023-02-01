@@ -1,8 +1,8 @@
 import './App.css';
 import React, { useState } from 'react';
 import NavBar from './Pages/LoginPage/NavBar';
-import Card from './components/Card/Card';
-import LoginPage from './Pages/LoginPage/LoginPage';
+import SignInPage from './components/Card/SignInPage';
+import HomePage from './Pages/LoginPage/HomePage';
 import GadgetsPage from './Pages/LoginPage/itemsPage/GadgetsPage';
 import SignUp from './components/Card/SignUp';
 import HomeItemCard from './Pages/LoginPage/HomeItemCard';
@@ -14,6 +14,7 @@ import ToysPage from './Pages/LoginPage/itemsPage/ToysPage';
 function App() {
   // const [login,setLogin] = useState(false)
   // const [signUp,setSignUp] = useState(false)
+  // const [close,setClose] = useState(false)
   // const [cart,setCart] = useState(false)
 
   // const loginHandler = () => {
@@ -24,6 +25,10 @@ function App() {
   // const signUpHandler = () => {
   //   setSignUp(!signUp)
   // }
+
+//   const closeHandler = () => {
+//     setClose(!close)
+// }
 
   // const cartHandler = () => {
   //   setCart(!cart)
@@ -39,12 +44,19 @@ function App() {
   
   return (
     <div className="App">
+      
         <BrowserRouter>
-          <NavBar />
+          <NavBar  />
+          {/* {
+            login ? <SignInPage signUpHandler={signUpHandler} close={close} closeHandler={closeHandler} /> : null
+          }
+          {
+            signUp ? <SignUp close={close} closeHandler={closeHandler} /> : null
+          } */}
             <Routes>
-              <Route path='/' element={<LoginPage />}/>
+              <Route path='/' element={<HomePage />}/>
               <Route path='/gadgetsPage' element={<GadgetsPage />} />
-              <Route path='/signInPage' element={<Card />} />
+              <Route path='/signInPage' element={<SignInPage />} />
               <Route path='/signUpPage' element={<SignUp />} />
               <Route path='/cartPage' element={<CartList />} />
               <Route path='/toysPage' element={<ToysPage />}/>

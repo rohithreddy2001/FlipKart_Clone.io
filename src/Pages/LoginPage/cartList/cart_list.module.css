@@ -16,9 +16,8 @@
     align-items: center;
 }
 .top_ctn {
-    margin-top: 5vh;
     height: 10vh;
-    width: 100vw;
+    width: 90vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,20 +31,33 @@
     
     height: 10vh;
     width: 50vw;
-    color: royalblue;
     display: flex;
     justify-content: center;
     align-items: center;
     
 }
 .top_header {
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
     cursor: pointer;
+    font-family: Roboto,Arial,sans-serif;
+    
 }
+.top_header:hover {
+    color: royalblue;
+    border-bottom: 3px solid royalblue;
+    padding-bottom: 20px;
+
+}
+
 
 .bottom_ctn {
     margin-top: 5vh;
     height: 60vh;
-    width: 100vw;
+    width: 90vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,6 +85,28 @@
 .l_btn:hover {
     background-color: rgba(255, 119, 0, 0.848);
 }
+
+.shop_btn {
+    width: 150px;
+    height: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgb(27, 98, 251);
+    color: white;
+    border: none;
+}
+.shop_btn:hover {
+    background-color: rgb(79, 123, 255);
+}
+
 h5 {
     font-weight: lighter;
+}
+
+.cart_page,.grocery_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
 }
