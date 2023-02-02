@@ -1,4 +1,5 @@
 import React from 'react'
+
 import ItemCard from './ItemCard'
 import classes from './item_card.module.css'
 import samsung_img from './samsung.png'

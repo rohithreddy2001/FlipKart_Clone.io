@@ -1,7 +1,13 @@
 import React from 'react'
 import classes from './item_card.module.css'
+import { useNavigate } from 'react-router-dom'
 
 const ItemCard = ({items}) => {
+    let navigate = useNavigate()
+    const cartHandler =() => {
+        console.log("clicked")
+        navigate('/cartPage')
+    }
         console.log(items.Brand)
     return(
         <div className={classes.i_card}>
@@ -16,7 +22,7 @@ const ItemCard = ({items}) => {
                 <h5 className={classes.rating}>{items.Rating}</h5>
                 
                 <div className={classes.cart_btn}>
-                    <button className={classes.add_btn}>Add to cart</button>
+                    <button className={classes.add_btn} onClick={cartHandler}>Add to cart</button>
                     <button className={classes.buy_btn}>Buy Now</button>
                 </div>
             </div>
