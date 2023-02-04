@@ -6,13 +6,16 @@ import SignUp from './SignUp'
 import App from '../../App'
 import { useNavigate } from 'react-router-dom'
 
-function Card ({close,closeHandler}) {
+function Card () {
     const [name,setName] = useState("")
     const [pass,setPass] = useState("")
     
     let navigate = useNavigate()
     const signUpHandler =() => {
         navigate('/signUpPage')
+    }
+    const closeHandler = () => {
+        navigate('/')
     }
 
     function inputHandler(event) {
@@ -32,7 +35,8 @@ function Card ({close,closeHandler}) {
     
     
     return(
-        <div className={classes.card} style={close ? {display:"none"} : {display:'flex'}}>
+        <div className={classes.card}>
+            {/* style={close ? {display:"none"} : {display:'flex'}} */}
             <div className={classes.left}>
                 <div className={classes.top}>
                     <h2 className={classes.heading}>Login</h2>

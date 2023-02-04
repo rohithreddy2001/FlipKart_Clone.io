@@ -9,6 +9,7 @@ import HomeItemCard from './Pages/LoginPage/HomeItemCard';
 import CartList from './Pages/LoginPage/cartList/CartList';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import ToysPage from './Pages/LoginPage/itemsPage/ToysPage';
+import FooterPage from './Pages/LoginPage/FooterPage';
 
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
               <Route path='/cartPage' element={<CartList />} />
               <Route path='/toysPage' element={<ToysPage />}/>
             </Routes>
+          <FooterPage />
         </BrowserRouter>
         
     </div>

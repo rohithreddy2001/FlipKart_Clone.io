@@ -1,12 +1,18 @@
 import React,{useState} from 'react'
 import classes from './card.module.css'
 import logo from './logo.png'
+import { useNavigate } from 'react-router-dom'
 
 
-function SignUp({close,closeHandler}) {
+function SignUp() {
+    let navigate = useNavigate()
+    const closeHandler = () => {
+        navigate('/signInPage')
+    }
+
     
   return (
-    <div className={classes.card} style={close ? {display:"none"} : {display:'flex'}}>
+    <div className={classes.card}>
             <div className={classes.left}>
                 <div className={classes.top}>
                     <h2 className={classes.heading}>Looks like you're new here!</h2>
@@ -24,11 +30,11 @@ function SignUp({close,closeHandler}) {
                     <button onClick={closeHandler}>❌</button>
                     
                 </div>
-                <input className={classes.Input_Field} type='text' placeholder='Enter Your First Name' required></input> <br />
-                <input className={classes.Input_Field} type='text' placeholder='Enter Your Last Name' required></input> <br />
-                <input className={classes.Input_Field} type='email' placeholder='Enter Your Email' required></input> <br />
-                <input className={classes.Input_Field} type='password' placeholder='Create Password' required></input> <br />
-                <input className={classes.Input_Field} type='password' placeholder='Confirm Password' required></input> <br />
+                <input className={classes.Input_Field2} type='text' placeholder='Enter Your First Name' required></input> <br />
+                <input className={classes.Input_Field2} type='text' placeholder='Enter Your Last Name' required></input> <br />
+                <input className={classes.Input_Field2} type='email' placeholder='Enter Your Email' required></input> <br />
+                <input className={classes.Input_Field2} type='password' placeholder='Create Password' required></input> <br />
+                <input className={classes.Input_Field2} type='password' placeholder='Confirm Password' required></input> <br />
                 <button className={classes.SignUp_btn} type='submit'>Sign Up</button> <br />
             </div>
 

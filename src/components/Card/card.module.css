@@ -4,7 +4,7 @@
     margin-top: 10vh;
     width: 60vw;
     height: 80vh;
-    margin-top: 100px;
+    /* margin-top: 100px; */
     margin-left: 250px;
 
     box-shadow: rgba(0, 0, 0, 0.05) 
@@ -97,7 +97,7 @@
 
 .Login_btn {
     width: 80%;
-    height: 15%;
+    height: 20%;
     background-color: rgb(251, 100, 27);
     color: rgb(255, 255, 255);
     border: none;
@@ -128,12 +128,22 @@
 
 .Input_Field {
     width: 80%;
-    height: 10%;
+    height: 20%;
 
 }
 .Input_Field:focus {
     color: #2874f0;
 }
+
+.Input_Field2 {
+    width: 80%;
+    height: 10%;
+
+}
+.Input_Field2:focus {
+    color: #2874f0;
+}
+
 .forgot {
     color: rgb(0, 55, 218);
     padding-left: 2cm;

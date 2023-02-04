@@ -82,6 +82,10 @@ const ToysPage = () => {
 
   return (
     <div className={classes.toy_page}>
+      <div className={classes.page_title}>
+        <h2 className={classes.title_}>Best Of Toys & more... </h2>
+        <h3 className={classes.length_}>{data.length} {data.length === 1 ? "item" : "items"}</h3>
+      </div>
       {
         data.map(item => <ItemCard key={item.Id} items={item}/>)
       }
