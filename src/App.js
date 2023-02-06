@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import NavBar from './Pages/LoginPage/NavBar';
 import SignInPage from './components/Card/SignInPage';
 import HomePage from './Pages/LoginPage/HomePage';
@@ -13,6 +14,7 @@ import FooterPage from './Pages/LoginPage/FooterPage';
 
 
 function App() {
+
   // const [login,setLogin] = useState(false)
   // const [signUp,setSignUp] = useState(false)
   // const [close,setClose] = useState(false)
@@ -45,6 +47,9 @@ function App() {
   
   return (
     <div className="App">
+      {/* <Helmet>
+        <title>Online Shopping Site</title>
+      </Helmet> */}
       
         <BrowserRouter>
           <NavBar  />

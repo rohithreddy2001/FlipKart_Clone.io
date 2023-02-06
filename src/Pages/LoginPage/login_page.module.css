@@ -153,6 +153,9 @@
     justify-content: flex-start;
     align-items: flex-start;
 }
+.search_icon:hover {
+    transform: scale(1.1);
+}
 
 .login_button {
     width: 8%;
@@ -169,6 +172,11 @@
     margin-top: 15px;
     cursor: pointer;
 }
+
+.seller_btn:hover,.more_btn:hover,.Cart_btn:hover {
+    transform: scale(1.1);
+}
+
 i {
     color: azure;
     position: absolute;
@@ -280,6 +288,9 @@ i {
     height: 17vh;
     
 }
+.item_img:hover {
+    transform: scale(1.03);
+}
 
 .full_row_ctn {
     margin-bottom: 15px;
@@ -365,6 +376,9 @@ i {
     padding-top: 2px;
     padding-bottom: 2px;
     height: 17vh;
+}
+.item_img2:hover {
+    transform: scale(1.03);
 }
 
 .brand_name2 {

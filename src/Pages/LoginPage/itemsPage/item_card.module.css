@@ -116,6 +116,9 @@
     height: 22vh;
     
 }
+.item_img:hover {
+    transform: scale(1.03);
+}
 
 /* title */
 .page_title {
