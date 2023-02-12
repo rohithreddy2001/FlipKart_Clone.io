@@ -30,12 +30,14 @@ function SignUp() {
                     <button onClick={closeHandler}>❌</button>
                     
                 </div>
-                <input className={classes.Input_Field2} type='text' placeholder='Enter Your First Name' required></input> <br />
-                <input className={classes.Input_Field2} type='text' placeholder='Enter Your Last Name' required></input> <br />
-                <input className={classes.Input_Field2} type='email' placeholder='Enter Your Email' required></input> <br />
-                <input className={classes.Input_Field2} type='password' placeholder='Create Password' required></input> <br />
-                <input className={classes.Input_Field2} type='password' placeholder='Confirm Password' required></input> <br />
-                <button className={classes.SignUp_btn} type='submit'>Sign Up</button> <br />
+                <form className={classes.right}>
+                    <input className={classes.Input_Field2} type='text' placeholder='Enter Your First Name' required></input> <br />
+                    <input className={classes.Input_Field2} type='text' placeholder='Enter Your Last Name' required></input> <br />
+                    <input className={classes.Input_Field2} type='email' placeholder='Enter Your Email' required></input> <br />
+                    <input className={classes.Input_Field2} type='password' placeholder='Create Password' required></input> <br />
+                    <input className={classes.Input_Field2} type='password' placeholder='Confirm Password' required></input> <br />
+                    <button className={classes.SignUp_btn} type='submit'>Sign Up</button> <br />
+                </form>
             </div>
 
       </div>

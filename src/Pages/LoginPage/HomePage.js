@@ -23,7 +23,8 @@ import shoe3 from '../LoginPage/itemsPage/shoe-3.jpg'
 import shoe4 from '../LoginPage/itemsPage/shoe-4.jpg'
 import shoe5 from '../LoginPage/itemsPage/shoe-5.jpg'
 import shoe6 from '../LoginPage/itemsPage/shoe-6.jpg'
-
+import lenovo_img from '../LoginPage/itemsPage/lenovo.png'
+import cycle_img from '../LoginPage/itemsPage/cycle.png'
 import oneplus_img from '../LoginPage/itemsPage/oneplus.png'
 import vivo_img from '../LoginPage/itemsPage/vivo.png'
 import dell_img from './itemsPage/dell.png'
@@ -68,7 +69,14 @@ function HomePage(){
           Price: "38,999",
           Rating: "⭐⭐⭐⭐⭐ 6,500+ ratings",
           img:google_img
-        }
+        },
+        {
+          Id: 4,
+          Brand: 'Lenovo Idea Pad Slim 5',
+          Price: "59,999",
+          Rating: "⭐⭐⭐⭐⭐ 8,500+ ratings",
+          img:lenovo_img
+        },
         
     ]
 
@@ -93,7 +101,14 @@ function HomePage(){
             Price: "24,999",
             Rating: "⭐⭐⭐⭐⭐ 5,500+ ratings",
             img:gym_img
-          }
+          },
+          {
+            Id: 4,
+            Brand: 'Sports Cycle',
+            Price: "7,999",
+            Rating: "⭐⭐⭐⭐⭐ 1,500+ ratings",
+            img:cycle_img
+          },
     ]
 
     const shirts = [

@@ -64,22 +64,29 @@
     width: 80vw;
     height: 45vh;
     display: flex;
-    justify-content: center;
+    
+    padding-left: 15px;
+    justify-content: flex-start;
     align-items: center;
     background-color: rgb(255, 255, 255);
     gap: 10px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
 }
 
 .Bottom_Right {
     width: 80vw;
     height: 45vh;
+    padding-left: 15px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: rgb(255, 255, 255);
     gap: 10px;
-    flex-wrap: wrap;      
+    flex-wrap: nowrap; 
+    overflow-y: hidden;
+    overflow-x: scroll;     
 }
 
 .left_div {

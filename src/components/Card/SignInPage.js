@@ -54,6 +54,7 @@ function Card () {
                     <button onClick={closeHandler}>❌</button>
                     
                 </div>
+                <form className={classes.right}>
                 <input className={classes.Input_Field} type='text' placeholder='Enter Email/Mobile Number' onChange={inputHandler} value={name} required></input> <br />
                 <input className={classes.Input_Field} type='password' placeholder='Enter Password' onChange={passHandler} value={pass} required></input> <br />
                 <div className={classes.Field}>
@@ -65,6 +66,7 @@ function Card () {
                 <div className={classes.SignUp_Field}>
                     <a onClick={signUpHandler} >New to Flipkart? Create an account</a>
                 </div>
+                </form>
             </div>
         </div>
     )
