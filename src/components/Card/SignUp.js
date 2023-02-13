@@ -39,15 +39,15 @@ function SignUp() {
     }
 
 
-    var api = "http://localhost:8080/users/addUser"
+    var api = "http://localhost:8080/user/addUser"
 
     const submitHandler = (e) => {
         e.preventDefault()
         const user = {
-            firstName:f_name,
-            lastName:l_name,
-            email:email,
-            password:password,
+            f_name:f_name,
+            l_name:l_name,
+            mail:email,
+            createPassword:password,
             confirmPassword:c_password
         }
         console.log(user)
