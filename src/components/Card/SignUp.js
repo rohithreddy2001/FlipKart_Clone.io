@@ -2,12 +2,63 @@ import React,{useState} from 'react'
 import classes from './card.module.css'
 import logo from './logo.png'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 
 function SignUp() {
     let navigate = useNavigate()
     const closeHandler = () => {
         navigate('/signInPage')
+    }
+
+    const [f_name,setF_name] = useState("")
+    const [l_name,setL_name] = useState("")
+    const [email,setEmail] = useState("")
+    const [password,setPassword] = useState("")
+    const [c_password,setC_password] = useState("")
+
+
+    const f_nameHandler = (e) => {
+        setF_name(e.target.value)
+    }
+
+    const l_nameHandler = (e) => {
+        setL_name(e.target.value)
+    }
+
+    const emailHandler = (e) => {
+        setEmail(e.target.value)
+    }
+
+    const passwordHandler = (e) => {
+        setPassword(e.target.value)
+    }
+
+    const c_passwordHandler = (e) => {
+        setC_password(e.target.value)
+    }
+
+
+    var api = "http://localhost:8080/users/addUser"
+
+    const submitHandler = (e) => {
+        e.preventDefault()
+        const user = {
+            firstName:f_name,
+            lastName:l_name,
+            email:email,
+            password:password,
+            confirmPassword:c_password
+        }
+        console.log(user)
+
+        axios.post(api,user)
+        
+        setF_name("")
+        setL_name("")
+        setEmail("")
+        setPassword("")
+        setC_password("")
     }
 
     
@@ -31,12 +82,12 @@ function SignUp() {
                     
                 </div>
                 <form className={classes.right}>
-                    <input className={classes.Input_Field2} type='text' placeholder='Enter Your First Name' required></input> <br />
-                    <input className={classes.Input_Field2} type='text' placeholder='Enter Your Last Name' required></input> <br />
-                    <input className={classes.Input_Field2} type='email' placeholder='Enter Your Email' required></input> <br />
-                    <input className={classes.Input_Field2} type='password' placeholder='Create Password' required></input> <br />
-                    <input className={classes.Input_Field2} type='password' placeholder='Confirm Password' required></input> <br />
-                    <button className={classes.SignUp_btn} type='submit'>Sign Up</button> <br />
+                    <input className={classes.Input_Field2} type='text' value={f_name} placeholder='Enter Your First Name' onChange={f_nameHandler} required></input> <br />
+                    <input className={classes.Input_Field2} type='text' value={l_name} placeholder='Enter Your Last Name' onChange={l_nameHandler} required></input> <br />
+                    <input className={classes.Input_Field2} type='email' value={email} placeholder='Enter Your Email' onChange={emailHandler} required></input> <br />
+                    <input className={classes.Input_Field2} type='password' value={password} placeholder='Create Password' onChange={passwordHandler} required></input> <br />
+                    <input className={classes.Input_Field2} type='password' value={c_password} placeholder='Confirm Password' onChange={c_passwordHandler} required></input> <br />
+                    <button className={classes.SignUp_btn} type='submit' onClick={submitHandler}>Sign Up</button> <br />
                 </form>
             </div>
 
