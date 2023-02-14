@@ -5,10 +5,11 @@ import logo from './logo.png'
 import SignUp from './SignUp'
 import App from '../../App'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 function Card () {
-    const [name,setName] = useState("")
-    const [pass,setPass] = useState("")
+    const [email,setEmail] = useState("")
+    const [Password,setPassword] = useState("")
     
     let navigate = useNavigate()
     const signUpHandler =() => {
@@ -18,19 +19,33 @@ function Card () {
         navigate('/')
     }
 
-    function inputHandler(event) {
-        setName(event.target.value)
-        event.preventDefault()
+    const emailHandler = (event) => {
+        setEmail(event.target.value)
+        
     }
-    function passHandler(e) {
-        setPass(e.target.value)
+    const passHandler = (event) => {
+        setPassword(event.target.value)
+        
+    }
+
+    var Results = "http://localhost:8080/Users/allowUsers"
+    const loginHandler = (e) => {
         e.preventDefault()
+        const Users = {
+            Mail:email,
+            Password:Password
+        
+        }
+        console.log(Users)
+
+        axios.post(Results,Users)
+        
+        setEmail("")
+        setPassword("")
+        
     }
-    function buttonHandler() {
-        alert(`Name: ${name}, Password: ${pass}`);
-        setName("");
-        setPass("");
-    }
+
+
 
     
     
@@ -55,14 +70,14 @@ function Card () {
                     
                 </div>
                 <form className={classes.right}>
-                <input className={classes.Input_Field} type='text' placeholder='Enter Email/Mobile Number' onChange={inputHandler} value={name} required></input> <br />
-                <input className={classes.Input_Field} type='password' placeholder='Enter Password' onChange={passHandler} value={pass} required></input> <br />
+                <input className={classes.Input_Field} type='text' placeholder='Enter Email/Mobile Number' onChange={emailHandler} value={email} required></input> <br />
+                <input className={classes.Input_Field} type='password' placeholder='Enter Password' onChange={passHandler} value={Password} required></input> <br />
                 <div className={classes.Field}>
                     <input type='checkbox' /> <label>Remember Me</label>
                     <a className={classes.forgot} href='#'>Forgot Password?</a>
                 </div>
                 <p className={classes.para}>* By continuing, you agree to Flipkart's Terms of Use and Privacy Policy.</p>
-                <button className={classes.Login_btn} type='submit' onClick={buttonHandler}>Login</button> <br />
+                <button className={classes.Login_btn} type='submit' onClick={loginHandler}>Login</button> <br />
                 <div className={classes.SignUp_Field}>
                     <a onClick={signUpHandler} >New to Flipkart? Create an account</a>
                 </div>
