@@ -29,6 +29,7 @@ function Card () {
     }
 
     var Results = "http://localhost:8080/Users/allowUsers"
+
     const loginHandler = (e) => {
         e.preventDefault()
         const Users = {
@@ -44,10 +45,6 @@ function Card () {
         setPassword("")
         
     }
-
-
-
-    
     
     return(
         <div className={classes.card}>
@@ -70,17 +67,17 @@ function Card () {
                     
                 </div>
                 <form className={classes.right}>
-                <input className={classes.Input_Field} type='text' placeholder='Enter Email/Mobile Number' onChange={emailHandler} value={email} required></input> <br />
-                <input className={classes.Input_Field} type='password' placeholder='Enter Password' onChange={passHandler} value={Password} required></input> <br />
-                <div className={classes.Field}>
-                    <input type='checkbox' /> <label>Remember Me</label>
-                    <a className={classes.forgot} href='#'>Forgot Password?</a>
-                </div>
-                <p className={classes.para}>* By continuing, you agree to Flipkart's Terms of Use and Privacy Policy.</p>
-                <button className={classes.Login_btn} type='submit' onClick={loginHandler}>Login</button> <br />
-                <div className={classes.SignUp_Field}>
-                    <a onClick={signUpHandler} >New to Flipkart? Create an account</a>
-                </div>
+                    <input className={classes.Input_Field} type='email' placeholder='Enter Email/Mobile Number' onChange={emailHandler} value={email} required></input> <br />
+                    <input className={classes.Input_Field} type='password' placeholder='Enter Password' onChange={passHandler} value={Password} required></input> <br />
+                    <div className={classes.Field}>
+                        <input type='checkbox' /> <label>Remember Me</label>
+                        <a className={classes.forgot} href='#'>Forgot Password?</a>
+                    </div>
+                    <p className={classes.para}>* By continuing, you agree to Flipkart's Terms of Use and Privacy Policy.</p>
+                    <button className={classes.Login_btn} type='submit' onClick={loginHandler}>Login</button> <br />
+                    <div className={classes.SignUp_Field}>
+                        <a onClick={signUpHandler} >New to Flipkart? Create an account</a>
+                    </div>
                 </form>
             </div>
         </div>
